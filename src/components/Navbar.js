@@ -19,9 +19,9 @@ export default function Navbar() {
           <Link to="/signup">
             <li>Sign up</li>
           </Link>
-          <a href="signIn.html">
+          <Link to="/signIn">
             <li>Sign in</li>
-          </a>
+          </Link>
           <a href="quotes.html">
             <li>Quotes</li>
           </a>

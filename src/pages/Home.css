@@ -45,7 +45,6 @@ h2 {
 }
 
 /*FORM ELEMENTS*/
-
 #formwrapper {
   opacity: 0.8;
   background-color: #efddf7;
@@ -85,13 +84,4 @@ label {
   color: #232323;
   display: block;
   margin-top: 15px;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-
-  background: #232323;
-  color: #cdcdcd;
-  font-family: "Avenir Next", "Avenir", sans-serif;
 }
