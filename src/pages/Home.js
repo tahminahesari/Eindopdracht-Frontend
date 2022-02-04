@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import "../components/Background.css";
 
 export default function Home() {
   return (

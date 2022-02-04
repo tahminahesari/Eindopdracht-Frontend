@@ -1,19 +1,7 @@
-/*PAGES*/
-
 /*Home Page*/
 
-.page {
-  background-repeat: no-repeat;
-  background-position: 0% 0%;
-  background-size: 100%;
-  min-height: 100vh;
-  display: flex; /* or inline-flex */
-  align-items: center;
-  justify-content: center;
-}
-
 #homePage {
-  background-image: url("../pages/bts.png");
+  background-image: url("../img/bts.png");
 }
 
 #quotes {
@@ -22,102 +10,11 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-#uploadPage {
+/* #uploadPage {
   background-image: url(../img/armyBomb.png);
-}
-
-#quotesPage {
-  background-image: url(../img/luna1.png);
-}
-h1 {
-  text-align: center;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-}
-h2 {
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-}
+} */
 
 /*hij doet niet!*/
-#gamePage {
+/* #gamePage {
   background-image: url("../img/natures.jpg");
-}
-
-/*FORM ELEMENTS*/
-
-#formwrapper {
-  opacity: 0.8;
-  background-color: #efddf7;
-  margin: auto;
-  margin-top: 100px;
-  width: 30%;
-  border: 3px solid white;
-  padding: 20px;
-}
-
-@media screen and (min-width: 0px) and (max-width: 400px) {
-  #formwrapper {
-    width: 100% !important;
-  }
-}
-@media screen and (min-width: 401px) and (max-width: 550px) {
-  #formwrapper {
-    width: 50% !important;
-  }
-}
-
-button,
-input[type="submit"] {
-  color: white;
-  background-color: #232323;
-  padding: 10px;
-  width: 100%;
-}
-
-input,
-textarea {
-  margin-top: 5px;
-  width: 100%;
-}
-
-label {
-  color: #232323;
-  display: block;
-  margin-top: 15px;
-}
-
-/*#imginthefooter {*/
-/*    background: url(../img/chimy_trans.png);*/
-/*    background-repeat: no-repeat;*/
-/*    !*width:100px;*!*/
-/*    height: 300px;*/
-/*    z-index: 300;*/
-/*    bottom: 0px;*/
-/*    top: -145px;*/
-/*    right: -1150px;*/
-/*    position: relative;*/
-/*}*/
-
-/*#imginthefooter {*/
-/*    background: url(../img/tata.jpg);*/
-/*    background-repeat: no-repeat;*/
-/*    width: 100px;*/
-/*    height: 300px;*/
-/*    z-index: 300;*/
-/*    bottom: 0px;*/
-/*    top: -100px;*/
-/*    right: -680px;*/
-/*    position: relative;*/
-
-/*#imginthefooter {*/
-/*    background: url(../img/koya.png);*/
-/*    background-repeat: no-repeat;*/
-/*    width: 300px;*/
-/*    height: 300px;*/
-/*    z-index: 300;*/
-/*    bottom: 0px;*/
-/*    top: -210px;*/
-/*    right: -1310px;*/
-/*    position: relative;*/
-/*}*/
+} */

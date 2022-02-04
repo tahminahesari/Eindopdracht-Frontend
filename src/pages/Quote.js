@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css";
+import "./Quote.css";
 
 export default function Quote() {
   return (

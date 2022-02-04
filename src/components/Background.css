@@ -1,0 +1,10 @@
+.page {
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: 100%;
+  background-color: #232323;
+  min-height: 100vh;
+  display: flex; /* or inline-flex */
+  align-items: center;
+  justify-content: center;
+}
