@@ -6,7 +6,8 @@ h1 {
   text-shadow: -1px -1px 0 #232323, 1px -1px 0 #232323, -1px 1px 0 #232323,
     1px 1px 0 #232323;
 }
-h2 {
+h1 {
+  text-align: center;
   text-shadow: -1px -1px 0 #232323, 1px -1px 0 #232323, -1px 1px 0 #232323,
     1px 1px 0 #232323;
 }

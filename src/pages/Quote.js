@@ -1,5 +1,6 @@
 import React from "react";
 import "./Quote.css";
+import "../components/Background.css";
 
 export default function Quote() {
   return (
