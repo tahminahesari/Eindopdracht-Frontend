@@ -7,6 +7,7 @@ import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
 import Quote from "./pages/Quote";
 import Upload from "./pages/Upload";
+import Game from "./pages/Game";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/quote" element={<Quote />} />
         <Route path="/upload" element={<Upload />} />
+        <Route path="/game" element={<Game />} />
       </Routes>
     </div>
   );

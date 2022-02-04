@@ -28,9 +28,9 @@ export default function Navbar() {
           <Link to="/upload">
             <li>Uploads</li>
           </Link>
-          <a href="/game">
+          <Link to="/game">
             <li>Quote Game</li>
-          </a>
+          </Link>
         </ul>
       </div>
     </nav>
