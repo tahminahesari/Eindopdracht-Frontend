@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
+import Quote from "./pages/Quote";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/signin" elemnt={<Signin />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/quote" element={<Quote />} />
       </Routes>
     </div>
   );

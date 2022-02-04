@@ -13,7 +13,7 @@
 }
 
 #homePage {
-  background-image: url(./bts.png);
+  background-image: url("../pages/bts.png");
 }
 
 #quotes {
@@ -23,11 +23,11 @@
 }
 
 #uploadPage {
-  /* background-image: url(../img/armyBomb.png); */
+  background-image: url(../img/armyBomb.png);
 }
 
 #quotesPage {
-  /* background-image: url(../img/luna1.png); */
+  background-image: url(../img/luna1.png);
 }
 h1 {
   text-align: center;
@@ -41,10 +41,11 @@ h2 {
 
 /*hij doet niet!*/
 #gamePage {
-  /* background-image: url("/img/natures.jpg"); */
+  background-image: url("../img/natures.jpg");
 }
 
 /*FORM ELEMENTS*/
+
 #formwrapper {
   opacity: 0.8;
   background-color: #efddf7;
@@ -85,3 +86,38 @@ label {
   display: block;
   margin-top: 15px;
 }
+
+/*#imginthefooter {*/
+/*    background: url(../img/chimy_trans.png);*/
+/*    background-repeat: no-repeat;*/
+/*    !*width:100px;*!*/
+/*    height: 300px;*/
+/*    z-index: 300;*/
+/*    bottom: 0px;*/
+/*    top: -145px;*/
+/*    right: -1150px;*/
+/*    position: relative;*/
+/*}*/
+
+/*#imginthefooter {*/
+/*    background: url(../img/tata.jpg);*/
+/*    background-repeat: no-repeat;*/
+/*    width: 100px;*/
+/*    height: 300px;*/
+/*    z-index: 300;*/
+/*    bottom: 0px;*/
+/*    top: -100px;*/
+/*    right: -680px;*/
+/*    position: relative;*/
+
+/*#imginthefooter {*/
+/*    background: url(../img/koya.png);*/
+/*    background-repeat: no-repeat;*/
+/*    width: 300px;*/
+/*    height: 300px;*/
+/*    z-index: 300;*/
+/*    bottom: 0px;*/
+/*    top: -210px;*/
+/*    right: -1310px;*/
+/*    position: relative;*/
+/*}*/

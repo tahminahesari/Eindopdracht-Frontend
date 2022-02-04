@@ -1,25 +1,24 @@
 import React from "react";
+import Formwrapper from "../components/Formwrapper";
+import "./Home.css";
 
 export default function Signin() {
   return (
     <div id="signInPage" class="page">
-      <div id="formwrapper">
-        <h2> Sign in</h2>
-        <form>
-          <label for="email">Email:</label>
-          <input id="email" type="email" placeholder="Email" />
-          <br />
+      <Formwrapper formName="Sign in">
+        <label for="email">Email:</label>
+        <input id="email" type="email" placeholder="Email" />
+        <br />
 
-          <label for="password">Password:</label>
-          <input id="password" type="password" placeholder="Password" />
-          <br />
-          <br />
+        <label for="password">Password:</label>
+        <input id="password" type="password" placeholder="Password" />
+        <br />
+        <br />
 
-          <button id="signIn" type="button">
-            Sign In
-          </button>
-        </form>
-      </div>
+        <button id="signIn" type="button">
+          Sign In
+        </button>
+      </Formwrapper>
     </div>
   );
 }

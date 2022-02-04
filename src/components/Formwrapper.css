@@ -1,4 +1,4 @@
-/* #formwrapper {
+#formwrapper {
   opacity: 0.8;
   background-color: #efddf7;
   margin: auto;
@@ -19,27 +19,7 @@
   }
 }
 
-button,
-input[type="submit"] {
-  color: white;
-  background-color: #232323;
-  padding: 10px;
-  width: 100%;
-}
-
-input,
-textarea {
-  margin-top: 5px;
-  width: 100%;
-}
-
-label {
-  color: #232323;
-  display: block;
-  margin-top: 15px;
-}
-
 h2 {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
-} */
+}

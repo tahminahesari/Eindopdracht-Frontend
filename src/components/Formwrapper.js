@@ -1,8 +1,12 @@
-// import React from "react";
-// import "./Formwrapper.css";
-// import { Link } from "react-router-dom";
+import React from "react";
+import "./Formwrapper.css";
 
-// export default function Formwrapper() {
-//   return <div></div>;
-// }
-// // Wat komt hier te staan? Signup en Signin pages.js heb ik al aangemaakt?
+export default function Formwrapper(props) {
+  console.log(props);
+  return (
+    <div id="formwrapper">
+      <h2>{props.formName}</h2>
+      <form>{props.children}</form>
+    </div>
+  );
+}

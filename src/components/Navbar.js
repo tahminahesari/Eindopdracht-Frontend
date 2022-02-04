@@ -22,13 +22,13 @@ export default function Navbar() {
           <Link to="/signIn">
             <li>Sign in</li>
           </Link>
-          <a href="quotes.html">
+          <Link to="/quote">
             <li>Quotes</li>
-          </a>
-          <a href="upload.html">
+          </Link>
+          <a href="/upload">
             <li>Uploads</li>
           </a>
-          <a href="game.html">
+          <a href="/game">
             <li>Quote Game</li>
           </a>
         </ul>
