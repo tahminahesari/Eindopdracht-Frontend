@@ -1,10 +1,10 @@
 import React from "react";
 import "./Quote.css";
-import "../components/Background.css";
-
+import Background from "../components/Background";
+import luna from "../img/luna1.png";
 export default function Quote() {
   return (
-    <div id="quotesPage" class="page">
+    <Background background={luna}>
       <div>
         <h1> BTS QUOTES </h1>
 
@@ -14,6 +14,6 @@ export default function Quote() {
           <br />― Bangtan Boys, Butterfly
         </h2>
       </div>
-    </div>
+    </Background>
   );
 }

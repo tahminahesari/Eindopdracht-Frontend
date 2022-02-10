@@ -1,6 +1,6 @@
 import React from "react";
 import Formwrapper from "../components/Formwrapper";
-import "../components/Background.css";
+import "../components/Background";
 
 export default function Signin() {
   return (

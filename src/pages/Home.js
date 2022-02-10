@@ -1,10 +1,11 @@
 import React from "react";
 import "./Home.css";
-import "../components/Background.css";
+import Background from "../components/Background";
+import bts from "../img/bts.png";
 
 export default function Home() {
   return (
-    <div id="homePage" class="page">
+    <Background background={bts}>
       <div id="quotes">
         <h2>Get a random quote</h2>
 
@@ -17,6 +18,6 @@ export default function Home() {
           💜 Suga
         </p>
       </div>
-    </div>
+    </Background>
   );
 }
