@@ -2,6 +2,7 @@ import React from "react";
 import "./Quote.css";
 import Background from "../components/Background";
 import luna from "../img/luna1.png";
+
 export default function Quote() {
   return (
     <Background background={luna}>

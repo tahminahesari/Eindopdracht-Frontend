@@ -6,8 +6,7 @@ import "../components/Background.js";
 export default function Upload() {
   return (
     <div id="uploadPage" className="page">
-      {/* krijg "Upload" titel op de pagina niet voor elkaar! */}
-      <Formwrapper forName="Upload">
+      <Formwrapper formName="Upload">
         <label for="email">Email:</label>
         <input id="email" type="email" placeholder="Your email" />
 
