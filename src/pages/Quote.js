@@ -9,7 +9,7 @@ export default function Quote() {
       <div>
         <h1> BTS QUOTES </h1>
 
-        <h2>
+        <h2 className="quote-white-outline">
           “The only time you should ever look back, is to see how far you've
           come.”
           <br />― Bangtan Boys, Butterfly

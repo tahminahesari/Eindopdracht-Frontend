@@ -2,10 +2,12 @@ import React from "react";
 import Formwrapper from "../components/Formwrapper";
 import "./Upload.css";
 import "../components/Background.js";
+import Background from "../components/Background.js";
+import armybomb from "../img/armyBomb.png";
 
 export default function Upload() {
   return (
-    <div id="uploadPage" className="page">
+    <Background background={armybomb}>
       <Formwrapper formName="Upload">
         <label for="email">Email:</label>
         <input id="email" type="email" placeholder="Your email" />
@@ -30,6 +32,6 @@ export default function Upload() {
 
         <input id="send" type="submit" />
       </Formwrapper>
-    </div>
+    </Background>
   );
 }
