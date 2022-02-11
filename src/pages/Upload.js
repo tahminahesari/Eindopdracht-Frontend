@@ -1,10 +1,11 @@
 import React from "react";
 import Formwrapper from "../components/Formwrapper";
 import "./Upload.css";
+import "../components/Background.js";
 
 export default function Upload() {
   return (
-    <div id="uploadPage" class="page">
+    <div id="uploadPage" className="page">
       {/* krijg "Upload" titel op de pagina niet voor elkaar! */}
       <Formwrapper forName="Upload">
         <label for="email">Email:</label>

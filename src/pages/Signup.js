@@ -1,10 +1,10 @@
 import React from "react";
 import Formwrapper from "../components/Formwrapper";
-import "../components/Background.css";
+import "../components/Background.js";
 
 export default function Signup() {
   return (
-    <div id="signUpPage" class="page">
+    <div id="signUpPage" className="page">
       <Formwrapper formName="Sign up">
         <label for="name">Name:</label>
         <input id="name" type="text" placeholder="Name" />

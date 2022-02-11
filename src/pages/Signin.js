@@ -1,10 +1,10 @@
 import React from "react";
 import Formwrapper from "../components/Formwrapper";
-import "../components/Background";
+import "../components/Background.js";
 
 export default function Signin() {
   return (
-    <div id="signInPage" class="page">
+    <div id="signInPage" className="page">
       <Formwrapper formName="Sign in">
         <label for="email">Email:</label>
         <input id="email" type="email" placeholder="Email" />
