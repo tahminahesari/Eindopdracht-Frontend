@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
-import Quote from "./pages/Quote";
+import QuotePage from "./pages/QuotePage";
 import Upload from "./pages/Upload";
 import Game from "./pages/Game";
 
@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
-        <Route path="/quote" element={<Quote />} />
+        <Route path="/quote" element={<QuotePage />} />
         <Route path="/upload" element={<Upload />} />
         <Route path="/game" element={<Game />} />
       </Routes>
