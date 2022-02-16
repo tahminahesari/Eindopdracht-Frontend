@@ -3,12 +3,14 @@ import "./Home.css";
 import Background from "../components/Background";
 import bts from "../img/bts.png";
 import Quote from "../components/Quote";
+import PageTitle from "../components/PageTitle";
+import TransparentCard from "../components/TransparentCard";
 
 export default function Home() {
   return (
     <Background background={bts}>
-      <div id="quotes">
-        <h2 id="homePageQuoteTitle">Get a random quote</h2>
+      <TransparentCard>
+        <PageTitle>Get a random quote </PageTitle>
         <Quote
           quote='"Do you know what purple means? Purple is last color of the rainbow, it means I will trust you and love you for a long time. Borahae"'
           member="V"
@@ -21,7 +23,7 @@ export default function Home() {
           quote='"I have come to love myself for who I am, for who I was, and for who I hope to become"'
           member="RM"
         />
-      </div>
+      </TransparentCard>
     </Background>
   );
 }

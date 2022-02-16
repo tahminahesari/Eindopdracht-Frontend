@@ -5,9 +5,9 @@ import Background from "../components/Background.js";
 import mikrokosmos from "../img/mikrokosmos.png";
 
 export default function Game() {
-  return;
-  // hij werkt niet?
-  <Background background={mikrokosmos}>
-    <div id="gamePage" className="page"></div>;
-  </Background>;
+  return (
+    <Background background={mikrokosmos}>
+      <div id="gamePage" className="page"></div>;
+    </Background>
+  );
 }
