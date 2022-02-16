@@ -3,13 +3,3 @@ h1 {
   text-shadow: -1px -1px 0 #232323, 1px -1px 0 #232323, -1px 1px 0 #232323,
     1px 1px 0 #232323;
 }
-h1 {
-  text-align: center;
-  text-shadow: -1px -1px 0 #232323, 1px -1px 0 #232323, -1px 1px 0 #232323,
-    1px 1px 0 #232323;
-}
-
-.quote-white-outline {
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
-    1px 1px 0 white;
-}

@@ -1,10 +1,13 @@
 import React from "react";
 import Formwrapper from "../components/Formwrapper";
-import "../components/Background.js";
+// import "../components/Background.js";
+import Background from "../components/Background.js";
 
 export default function Signin() {
   return (
-    <div id="signInPage" className="page">
+    <Background>
+      {/* als ik div weghaal dan gaat hij krimpen */}
+      {/* <div id="signInPage" className="page"> */}
       <Formwrapper formName="Sign in">
         <label for="email">Email:</label>
         <input id="email" type="email" placeholder="Email" />
@@ -19,6 +22,7 @@ export default function Signin() {
           Sign In
         </button>
       </Formwrapper>
-    </div>
+      {/* </div> */}
+    </Background>
   );
 }

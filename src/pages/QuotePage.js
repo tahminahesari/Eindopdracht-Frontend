@@ -12,11 +12,8 @@ export default function QuotePage() {
         <Quote
           quote="“The only time you should ever look back, is to see how far you've
           come.”"
-          member="V"
+          member=" Bangtan Boys, Butterfly"
         />
-        <h2 className="quote-white-outline">
-          <br />― Bangtan Boys, Butterfly
-        </h2>
       </div>
     </Background>
   );

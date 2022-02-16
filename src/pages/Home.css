@@ -1,5 +1,13 @@
 #quotes {
   padding: 20px;
-  /*color: #8E64C6;*/
-  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+#homePageQuoteTitle {
+  text-align: center;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
 }
