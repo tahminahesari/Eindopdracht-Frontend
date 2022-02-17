@@ -1,10 +1,12 @@
 import React from "react";
 import Formwrapper from "../components/Formwrapper";
 import Background from "../components/Background.js";
+import "./Signin.css";
 
 export default function Signin() {
   return (
     <Background>
+      {/* <img src="chimmy.jpg" alt="chimmy, image" /> */}
       <Formwrapper formName="Sign in">
         <label for="email">Email:</label>
         <input id="email" type="email" placeholder="Email" />
