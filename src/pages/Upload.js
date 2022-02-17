@@ -3,11 +3,11 @@ import Formwrapper from "../components/Formwrapper";
 import "./Upload.css";
 import "../components/Background.js";
 import Background from "../components/Background.js";
-import armybomb from "../img/armyBomb.png";
+import show from "../img/show.jpg";
 
 export default function Upload() {
   return (
-    <Background background={armybomb}>
+    <Background background={show}>
       <Formwrapper formName="Upload">
         <label for="email">Email:</label>
         <input id="email" type="email" placeholder="Your email" />
