@@ -4,8 +4,8 @@ import "../components/RadioButtons.css";
 export default function RadioButtons(props) {
   return (
     <div className="radio-buttons">
-      <div clasName="radio-content">
-        <input id="radio1" type="radio" name="radio" checked />
+      <div className="radio-content">
+        <input id="radio1" type="radio" name="radio" />
         <label for="radio1">
           <span></span> Jin
         </label>
@@ -38,17 +38,17 @@ export default function RadioButtons(props) {
           <span></span> Jimin
         </label>
       </div>
-
-      <div clasName="radio-content">
-        <input id="radio6" type="radio" name="radio" checked />
+      <br />
+      <div className="radio-content">
+        <input id="radio6" type="radio" name="radio" />
         <label for="radio6">
           <span></span> V
         </label>
       </div>
       <br />
 
-      <div clasName="radio-content">
-        <input id="radio7" type="radio" name="radio" checked />
+      <div className="radio-content">
+        <input id="radio7" type="radio" name="radio" />
         <label for="radio7">
           <span></span> Jungkook
         </label>

@@ -4,7 +4,7 @@ import "../components/RadioButtons.js";
 
 export default function Quote(props) {
   return (
-    <blockquote>
+    <blockquote className="quote-wrapper">
       <p className="quoteText">
         {" "}
         {props.quote}
