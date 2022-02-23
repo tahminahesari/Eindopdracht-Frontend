@@ -13,8 +13,8 @@ export default function Game() {
   const [quote, setQuote] = useState(
     "`Even if you’re not perfect you’re limited edition`"
   );
-  const [correctMember, setCorrectMember] = useState("Jin");
-  const [questionsTried, setQuestionsTried] = useState(10);
+  const [correctMember, setCorrectMember] = useState("RM");
+  const [questionsTried, setQuestionsTried] = useState(42);
 
   let feedback;
   if (selectedMember === correctMember) {
@@ -24,7 +24,14 @@ export default function Game() {
   } else {
     feedback = "Oops it was actually: " + correctMember;
   }
-  let color = "hotpink";
+  let color;
+  if (selectedMember === correctMember) {
+    color = "green";
+  } else if (selectedMember === "") {
+    color = "white";
+  } else {
+    color = "hotpink";
+  }
 
   return (
     <Background background={btblack}>
