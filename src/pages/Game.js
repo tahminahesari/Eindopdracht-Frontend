@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "./Game.css";
 import "../components/Background.js";
 import Background from "../components/Background.js";
-// import btchar from "../img/btchar.jpg";
-import btblue3 from "../img/btblue3.jpg";
+import btblue from "../img/btblue.jpg";
 import RadioButtons from "../components/RadioButtons";
 import Quote from "../components/Quote";
 import PageTitle from "../components/PageTitle";
@@ -36,7 +35,7 @@ export default function Game() {
   }
 
   return (
-    <Background background={btblue3}>
+    <Background background={btblue}>
       <TransparentCard>
         <PageTitle>Who said this? </PageTitle>
 
