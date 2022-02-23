@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "./Game.css";
 import "../components/Background.js";
 import Background from "../components/Background.js";
-import btblack from "../img/btblack.jpg";
+// import btchar from "../img/btchar.jpg";
+import btblue3 from "../img/btblue3.jpg";
 import RadioButtons from "../components/RadioButtons";
 import Quote from "../components/Quote";
 import PageTitle from "../components/PageTitle";
+import TransparentCard from "../components/TransparentCard";
 
 export default function Game() {
   const [score, setScore] = useState(5);
@@ -34,18 +36,11 @@ export default function Game() {
   }
 
   return (
-    <Background background={btblack}>
-      <div>
-        <p className="score">
-          {score} / {questionsTried} points
-        </p>
-        <p className="feedback" style={{ color: color }}>
-          {feedback}
-        </p>
-        <p className="selectedMember">{selectedMember}</p>
+    <Background background={btblue3}>
+      <TransparentCard>
+        <PageTitle>Who said this? </PageTitle>
 
         <Quote quote={quote} member="???" />
-        <PageTitle>Who said this? </PageTitle>
 
         <RadioButtons
           selectedMember={selectedMember}
@@ -56,7 +51,15 @@ export default function Game() {
           setQuestionsTried={setQuestionsTried}
           correctMember={correctMember}
         />
-      </div>
+
+        <p className="score">
+          {score} / {questionsTried} points
+        </p>
+        <p className="feedback" style={{ color: color }}>
+          {feedback}
+        </p>
+        <p className="selectedMember">{selectedMember}</p>
+      </TransparentCard>
     </Background>
   );
 }

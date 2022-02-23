@@ -10,7 +10,7 @@ export default function Quote(props) {
         {props.quote}
         <br />
         <br />
-        💜 {props.member}
+        <span>💜 {props.member}</span>
       </p>
     </blockquote>
   );

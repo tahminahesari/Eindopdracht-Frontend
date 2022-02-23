@@ -15,7 +15,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  background-color: lightblue;
+  /* background-color: lightblue; */
 }
 
 .radio-content {
@@ -31,7 +31,7 @@ input[type="radio"] {
 }
 
 input[type="radio"] + label {
-  color: black;
+  color: white;
   cursor: pointer;
   font-size: 20px;
 }
@@ -54,12 +54,12 @@ input[type="radio"] + label:hover span {
 }
 
 input[type="radio"]:checked + label span {
-  background: background #1d976c;
-  background: -webkit-linear-gradient(to right, #93f9b9, #1d976c);
-  background: linear-gradient(to right, #93f9b9, #1d976c);
-  box-shadow: 0px 0px 0px 5px lightblue inset;
+  background: background #efddf7;
+  background: -webkit-linear-gradient(to right, #efddf7, #efddf7);
+  background: linear-gradient(to right, #b541e7, #efddf7);
+  box-shadow: 0px 0px 0px 5px #efddf7 inset;
 }
 
 input[type="radio"]:checked + label {
-  color: #38aa7c;
+  color: #efddf7;
 }
