@@ -2,3 +2,27 @@
 /* .background {
   object-fit: cover;
 } */
+
+.score {
+  color: white;
+}
+
+.feedback {
+  color: white;
+}
+
+.qoute {
+  color: white;
+}
+
+.selectedMember {
+  color: white;
+}
+
+.correctMemeber {
+  color: white;
+}
+
+.questionTried {
+  color: white;
+}
