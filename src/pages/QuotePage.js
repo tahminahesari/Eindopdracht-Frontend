@@ -11,7 +11,7 @@ export default function QuotePage() {
   const [quotes, setQuotes] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
+    async function fetchQuotes() {
       try {
         const result = await axios.get(
           "https://bts-quotes-api.herokuapp.com/quotes"
@@ -21,7 +21,7 @@ export default function QuotePage() {
       } catch (error) {}
     }
     // console.log("Hi!");
-    fetchData();
+    fetchQuotes();
   }, []);
   // console.log(quotes);
 
