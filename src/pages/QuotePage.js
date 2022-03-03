@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./QuotePage.css";
 import Background from "../components/Background";
 import blackswan from "../img/blackswan.jpg";
 import Quote from "../components/Quote";
 import PageTitle from "../components/PageTitle";
 import TransparentCard from "../components/TransparentCard";
+import axios from "axios";
 
 export default function QuotePage() {
+  const [quotes, setQuotes] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const result = await axios.get(
+          "https://bts-quotes-api.herokuapp.com/quotes"
+        );
+        // console.log(result);
+        setQuotes(result.data);
+      } catch (error) {}
+    }
+    // console.log("Hi!");
+    fetchData();
+  }, []);
+  // console.log(quotes);
+
   return (
     <Background background={blackswan}>
       <TransparentCard>
@@ -16,6 +34,12 @@ export default function QuotePage() {
           come.”"
           member=" Bangtan Boys, Butterfly"
         />
+        {quotes.map((quote) => {
+          // console.log(quote);
+          return (
+            <Quote key={quote.id} quote={quote.quote} member={quote.member} />
+          );
+        })}
       </TransparentCard>
     </Background>
   );
