@@ -6,6 +6,7 @@ export default function RadioButtons(props) {
   function chooseMember(member) {
     props.setSelectedMember(member);
     props.setQuestionsTried(props.questionsTried + 1);
+    props.setDisplayedMember(props.correctMember);
     if (props.correctMember === member) {
       props.setScore(props.score + 1);
     }
@@ -21,11 +22,7 @@ export default function RadioButtons(props) {
           name="radio"
           checked={props.selectedMember === "Jin"}
           onChange={() => {
-            props.setSelectedMember("Jin");
-            props.setQuestionsTried(props.questionsTried + 1);
-            if (props.correctMember === "Jin") {
-              props.setScore(props.score + 1);
-            }
+            chooseMember("Jin");
           }}
           disabled={props.selectedMember !== ""}
         />

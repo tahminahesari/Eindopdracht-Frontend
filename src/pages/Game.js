@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Game.css";
 import "../components/Background.js";
 import Background from "../components/Background.js";
@@ -7,15 +7,37 @@ import RadioButtons from "../components/RadioButtons";
 import Quote from "../components/Quote";
 import PageTitle from "../components/PageTitle";
 import TransparentCard from "../components/TransparentCard";
+import axios from "axios";
 
 export default function Game() {
-  const [score, setScore] = useState(5);
+  const [score, setScore] = useState(0);
   const [selectedMember, setSelectedMember] = useState("");
-  const [quote, setQuote] = useState(
-    "`Even if you’re not perfect you’re limited edition`"
-  );
+  const [quote, setQuote] = useState("");
+  const [displayedMember, setDisplayedMember] = useState("???");
   const [correctMember, setCorrectMember] = useState("RM");
-  const [questionsTried, setQuestionsTried] = useState(42);
+  const [questionsTried, setQuestionsTried] = useState(0);
+
+  useEffect(() => {
+    async function fetchRandomQuote() {
+      try {
+        const result = await axios.get(
+          "https://bts-quotes-api.herokuapp.com/quote/random"
+        );
+        console.log(result.data.quote);
+        setQuote(result.data.quote);
+        setCorrectMember(result.data.member);
+        setSelectedMember("");
+        setDisplayedMember("???");
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    if (questionsTried === 0) {
+      fetchRandomQuote();
+    } else if (selectedMember !== "") {
+      const myTimeout = setTimeout(fetchRandomQuote, 5000);
+    }
+  }, [questionsTried, selectedMember]);
 
   let feedback;
   if (selectedMember === correctMember) {
@@ -39,7 +61,7 @@ export default function Game() {
       <TransparentCard>
         <PageTitle>Who said this? </PageTitle>
 
-        <Quote quote={quote} member="???" />
+        <Quote quote={quote} member={displayedMember} />
 
         <RadioButtons
           selectedMember={selectedMember}
@@ -49,6 +71,7 @@ export default function Game() {
           questionsTried={questionsTried}
           setQuestionsTried={setQuestionsTried}
           correctMember={correctMember}
+          setDisplayedMember={setDisplayedMember}
         />
 
         <p className="score">
