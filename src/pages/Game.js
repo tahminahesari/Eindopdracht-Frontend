@@ -14,7 +14,7 @@ export default function Game() {
   const [selectedMember, setSelectedMember] = useState("");
   const [quote, setQuote] = useState("");
   const [displayedMember, setDisplayedMember] = useState("???");
-  const [correctMember, setCorrectMember] = useState("RM");
+  const [correctMember, setCorrectMember] = useState(" ");
   const [questionsTried, setQuestionsTried] = useState(0);
 
   useEffect(() => {

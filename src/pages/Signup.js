@@ -1,26 +1,79 @@
-import React from "react";
+import React, { useState } from "react";
 import Formwrapper from "../components/Formwrapper";
 import Background from "../components/Background.js";
+import { useForm } from "react-hook-form";
 
 export default function Signup() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  function onSubmit(data) {
+    console.log(data);
+  }
+
+  console.log("ERRORS", errors);
+
   return (
     <Background>
-      <Formwrapper formName="Sign up">
-        <label for="name">Name:</label>
-        <input id="name" type="text" placeholder="Name" />
+      <Formwrapper
+        handleSubmit={handleSubmit}
+        onSubmit={onSubmit}
+        formName="Sign up"
+      >
+        <label htmlFor="details-name">
+          Name:
+          <input
+            type="text"
+            id="details-name"
+            placeholder="Name"
+            {...register("name"), {
+              required: "Name is required",
+              minLength: {
+              value: 3,
+              message: "Name must contain at least 3 characters",
+              },
+            }}
+          />
+          {errors.name && <p>{errors.name.message}</p>}
+        </label>
         <br />
         <br />
 
-        <label for="email">Email:</label>
-        <input id="email" type="email" placeholder="Email" />
-        <br />
-        <br />
+        <label htmlFor="email-account">
+          Email:
+          <input
+            type="email"
+            id="email-account"
+            placeholder="Email"
+            {...register("email"), {
+              required: {
+                value 
+              }
+            
+            }}
 
-        <label for="password">Password:</label>
-        <input id="password" type="password" />
-        <br />
-        <label for="confirmPassword">Confirm Password:</label>
-        <input id="confirmPassword" type="password" />
+          />
+          <br />
+          <br />
+        </label>
+
+        <label htmlFor="password">
+          Password:
+          <input type="password" id="password" {...register("password")} />
+          <br />
+        </label>
+
+        <label htmlFor="confirmPassword">
+          Confirm Password:
+          <input
+            id="confirmPassword"
+            type="password"
+            {...register("confirmPassword")}
+          />
+        </label>
 
         <br />
         <br />

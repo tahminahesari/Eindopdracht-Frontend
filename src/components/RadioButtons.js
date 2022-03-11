@@ -50,12 +50,12 @@ export default function RadioButtons(props) {
           id="radio3"
           type="radio"
           name="radio"
-          checked={props.selectedMember === "J-hope"}
-          onChange={() => chooseMember("J-hope")}
+          checked={props.selectedMember === "J-Hope"}
+          onChange={() => chooseMember("J-Hope")}
           disabled={isAMemberSelected}
         />
         <label htmlFor="radio3">
-          <span></span> J-hope
+          <span></span> J-Hope
         </label>
       </div>
       <br />
@@ -107,12 +107,12 @@ export default function RadioButtons(props) {
           id="radio7"
           type="radio"
           name="radio"
-          checked={props.selectedMember === "JK"}
-          onChange={() => chooseMember("JK")}
+          checked={props.selectedMember === "Jungkook"}
+          onChange={() => chooseMember("Jungkook")}
           disabled={isAMemberSelected}
         />
         <label htmlFor="radio7">
-          <span></span> JK
+          <span></span> Jungkook
         </label>
       </div>
       <br />
