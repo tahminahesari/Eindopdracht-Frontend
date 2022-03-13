@@ -42,23 +42,17 @@ export default function Signup() {
         <br />
         <br />
 
-        {/* <label htmlFor="email-account">
+        <label htmlFor="email-account">
           Email:
           <input
             type="email"
             id="email-account"
             placeholder="Email"
-            {...register("email"), {
-              required: {
-                value 
-              }
-            
-            }}
-
+            {...register("email")}
           />
           <br />
           <br />
-        </label> */}
+        </label>
 
         <label htmlFor="password">
           Password:

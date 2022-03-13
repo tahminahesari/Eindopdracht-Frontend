@@ -9,7 +9,7 @@ import axios from "axios";
 
 export default function Home() {
   const [randomQuote, setRandomQuote] = useState({});
-  console.log("Anneyong!");
+  // console.log("Anneyong!");
 
   useEffect(() => {
     async function fetchRandomQuote() {
