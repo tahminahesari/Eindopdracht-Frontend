@@ -48,11 +48,15 @@ export default function Signup() {
             type="email"
             id="email-account"
             placeholder="Email"
-            {...register("email")}
+            {...register("email", {
+              validate: (value) => value.includes("@"),
+              message: "Email must contain '@'",
+            })}
           />
-          <br />
-          <br />
+          {errors.email && <p>{errors.email.message}</p>}
         </label>
+        <br />
+        <br />
 
         <label htmlFor="password">
           Password:
