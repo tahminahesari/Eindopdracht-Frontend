@@ -10,10 +10,13 @@ export default function Signup() {
     formState: { errors },
   } = useForm();
 
+  // toegang tot de data die de gebruiker heeft ingevuld
   function onSubmit(data) {
+    // Wat is er ingevuld:
     console.log(data);
   }
 
+  // wat komt er uit useFrom?
   console.log("ERRORS", errors);
 
   return (
@@ -30,14 +33,22 @@ export default function Signup() {
             id="details-name"
             placeholder="Name"
             {...register("name", {
-              required: "Name is required",
+              required: true,
               minLength: {
                 value: 3,
-                message: "Name must contain at least 3 characters",
+                // pattern: /^[a-zA-Z ]*$/,
               },
             })}
           />
-          {errors.name && <p>{errors.name.message}</p>}
+          {errors.name?.type === "required" && <p>Please enter your name</p>}
+          {errors.name?.type === "minLength" && (
+            <p>Name must contain at least 3 characters</p>
+          )}
+          {/* {errors.name?.type === "pattern" && (
+            <p>
+              Please use A-Z, a-z and spaces, don't enter special characters{" "}
+            </p>
+          )} */}
         </label>
         <br />
         <br />
@@ -45,15 +56,14 @@ export default function Signup() {
         <label htmlFor="email-account">
           Email:
           <input
-            type="email"
+            type="mail"
             id="email-account"
             placeholder="Email"
             {...register("email", {
               validate: (value) => value.includes("@"),
-              message: "Email must contain '@'",
             })}
           />
-          {errors.email && <p>{errors.email.message}</p>}
+          {errors.email && <p> Email must contain @</p>}
         </label>
         <br />
         <br />
