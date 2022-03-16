@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Formwrapper from "../components/Formwrapper";
 import Background from "../components/Background.js";
 import { useForm } from "react-hook-form";
+import "./Signup.css";
 
 export default function Signup() {
   const {
@@ -9,7 +10,9 @@ export default function Signup() {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  console.log(handleSubmit);
 
+  //Submit handler
   // toegang tot de data die de gebruiker heeft ingevuld
   function onSubmit(data) {
     // Wat is er ingevuld:
@@ -26,51 +29,61 @@ export default function Signup() {
         onSubmit={onSubmit}
         formName="Sign up"
       >
-        <label htmlFor="details-name">
+        <label htmlFor="name">
           Name:
           <input
             type="text"
-            id="details-name"
+            id="name"
+            className={errors.name && "error"}
             placeholder="Name"
             {...register("name", {
               required: true,
               minLength: {
-                value: 3,
-                // pattern: /^[a-zA-Z ]*$/,
+                value: 2,
               },
             })}
           />
-          {errors.name?.type === "required" && <p>Please enter your name</p>}
-          {errors.name?.type === "minLength" && (
-            <p>Name must contain at least 3 characters</p>
+          {errors.name?.type === "required" && (
+            <p className="error-message">Please enter your name</p>
           )}
-          {/* {errors.name?.type === "pattern" && (
-            <p>
-              Please use A-Z, a-z and spaces, don't enter special characters{" "}
+          {errors.name?.type === "minLength" && (
+            <p className="error-message">
+              Name must contain at least 2 characters
             </p>
-          )} */}
+          )}
         </label>
         <br />
         <br />
 
-        <label htmlFor="email-account">
+        <label htmlFor="email">
           Email:
           <input
-            type="mail"
-            id="email-account"
+            type="text"
+            id="email"
+            className={errors.email && "error"}
             placeholder="Email"
             {...register("email", {
               validate: (value) => value.includes("@"),
             })}
           />
-          {errors.email && <p> Email must contain @</p>}
+          {errors.email && (
+            <p className="error-message"> Email must contain @</p>
+          )}
         </label>
         <br />
         <br />
 
         <label htmlFor="password">
           Password:
-          <input type="password" id="password" {...register("password")} />
+          <input 
+          type="password" 
+          id="password" 
+          {...register("password", {
+            pattern: 
+
+          }       
+                   
+          )} />
           <br />
         </label>
 
