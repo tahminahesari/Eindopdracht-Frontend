@@ -3,6 +3,7 @@ import Formwrapper from "../components/Formwrapper";
 import Background from "../components/Background.js";
 import { useForm } from "react-hook-form";
 import "./Signup.css";
+import { getValue } from "@testing-library/user-event/dist/utils";
 
 export default function Signup() {
   const {
@@ -75,15 +76,24 @@ export default function Signup() {
 
         <label htmlFor="password">
           Password:
-          <input 
-          type="password" 
-          id="password" 
-          {...register("password", {
-            pattern: 
-
-          }       
-                   
-          )} />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            className={errors.password && "error"}
+            {...register("password", {
+              minLength: 5,
+              pattern: /(?=.*?[0-9])/,
+            })}
+          />
+          {errors.password && (
+            <p className="error-message"> At least one digit,</p>
+          )}
+          {errors.password?.type === "minLength" && (
+            <p className="error-message">
+              Name must contain at least 5 characters
+            </p>
+          )}
           <br />
         </label>
 
@@ -92,8 +102,19 @@ export default function Signup() {
           <input
             id="confirmPassword"
             type="password"
-            {...register("confirmPassword")}
+            {...register("confirmPassword", {
+              validate: {
+                emailEqual: (value) =>
+                  value === password.current || "Passwords do not match!",
+              },
+            })}
           />
+          {errors.name?.type === "emailEqual" && (
+            <p className="error-message">Please enter your name</p>
+          )}
+          {errors.password && (
+            <p className="error-message"> Passwords do not match.</p>
+          )}
         </label>
 
         <br />
