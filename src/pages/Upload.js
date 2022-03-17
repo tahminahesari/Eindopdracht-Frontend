@@ -15,7 +15,6 @@ export default function Upload() {
   console.log(handleSubmit);
 
   function onSubmit(data) {
-    // Wat is er ingevuld:
     console.log(data);
   }
 
