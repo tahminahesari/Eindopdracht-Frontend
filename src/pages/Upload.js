@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Formwrapper from "../components/Formwrapper";
 import "./Upload.css";
 import "../components/Background.js";

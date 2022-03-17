@@ -6,18 +6,22 @@ import "./Signup.css";
 
 export default function Signup() {
   const {
+    // onderstaande functie en data(errors is een data) hal ik uit useForm
     register,
     handleSubmit,
     formState: { errors },
+    watch,
   } = useForm();
   console.log(handleSubmit);
 
   //Submit handler
   // toegang tot de data die de gebruiker heeft ingevuld
-  function onSubmit(data) {
+  async function onSubmit(data) {
     // Wat is er ingevuld:
     console.log(data);
   }
+  const firstPassword = watch("password");
+  console.log(firstPassword);
 
   // wat komt er uit useFrom?
   console.log("ERRORS", errors);
@@ -96,13 +100,15 @@ export default function Signup() {
           <br />
         </label>
 
-        {/* <label htmlFor="confirmPassword">
+        <label htmlFor="confirmPassword">
           Confirm Password:
           <input
             id="confirmPassword"
             type="password"
-            {...register({
-              validate: (value) => value === confirmPassword.password,
+            {...register("confirmPassword", {
+              validate: (value) => {
+                return value === firstPassword;
+              },
             })}
           />
           {errors.confirmPassword && (
@@ -111,7 +117,7 @@ export default function Signup() {
         </label>
 
         <br />
-        <br /> */}
+        <br />
 
         <button id="signUp" type="submit">
           Sign Up
