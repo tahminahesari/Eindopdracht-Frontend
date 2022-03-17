@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Formwrapper from "../components/Formwrapper";
 import Background from "../components/Background.js";
 import { useForm } from "react-hook-form";
@@ -16,15 +16,8 @@ export default function Signup() {
 
   //Submit handler
   // toegang tot de data die de gebruiker heeft ingevuld
-  async function onSubmit(data) {
-    // Wat is er ingevuld:
-    console.log(data);
-  }
+  async function onSubmit(data) {}
   const firstPassword = watch("password");
-  console.log(firstPassword);
-
-  // wat komt er uit useFrom?
-  console.log("ERRORS", errors);
 
   return (
     <Background>

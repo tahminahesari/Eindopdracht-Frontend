@@ -23,7 +23,7 @@ export default function Game() {
         const result = await axios.get(
           "https://bts-quotes-api.herokuapp.com/quote/random"
         );
-        console.log(result.data.quote);
+
         setQuote(result.data.quote);
         setCorrectMember(result.data.member);
         setSelectedMember("");

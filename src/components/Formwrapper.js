@@ -2,7 +2,6 @@ import React from "react";
 import "./Formwrapper.css";
 
 export default function Formwrapper(props) {
-  console.log("check", props.handleSubmit, props.onSubmit);
   return (
     <div id="formwrapper">
       <h2>{props.formName}</h2>

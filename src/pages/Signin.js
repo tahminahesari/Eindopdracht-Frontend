@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Formwrapper from "../components/Formwrapper";
 import Background from "../components/Background.js";
 import "./Signin.css";
@@ -15,7 +14,6 @@ export default function Signin() {
   function onSubmit(data) {
     console.log(data);
   }
-  console.log("ERRORS", errors);
 
   return (
     <Background>

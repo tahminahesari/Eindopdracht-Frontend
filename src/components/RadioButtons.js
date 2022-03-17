@@ -2,7 +2,6 @@ import React from "react";
 import "../components/RadioButtons.css";
 
 export default function RadioButtons(props) {
-  console.log(props);
   function chooseMember(member) {
     props.setSelectedMember(member);
     props.setQuestionsTried(props.questionsTried + 1);

@@ -18,8 +18,6 @@ export default function Upload() {
     console.log(data);
   }
 
-  console.log("ERRORS", errors);
-
   return (
     <Background background={show}>
       <Formwrapper
@@ -65,13 +63,13 @@ export default function Upload() {
         <br />
 
         <label htmlFor="message">
-          Your message:
+          Your quote:
           <textarea
             type="text"
             id="message"
             rows="3"
             cols="10"
-            placeholder="Type your message here"
+            placeholder="Place your quote here"
             {...register("message", {
               maxLength: {
                 value: 250,
@@ -86,12 +84,6 @@ export default function Upload() {
           )}
         </label>
 
-        <br />
-
-        <label htmlFor="file">Upload your file</label>
-        <input id="file" type="file" />
-
-        <br />
         <br />
 
         <input id="send" type="submit" />

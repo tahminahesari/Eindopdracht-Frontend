@@ -17,14 +17,12 @@ export default function Home() {
         const result = await axios.get(
           "https://bts-quotes-api.herokuapp.com/quote/random"
         );
-        console.log(result);
+
         setRandomQuote(result.data);
       } catch (error) {}
     }
     fetchRandomQuote();
   }, []);
-
-  console.log(randomQuote);
 
   return (
     <Background background={bts}>
