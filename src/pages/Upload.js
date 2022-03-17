@@ -1,32 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import Formwrapper from "../components/Formwrapper";
 import "./Upload.css";
 import "../components/Background.js";
 import Background from "../components/Background.js";
 import show from "../img/show.jpg";
+import { useForm } from "react-hook-form";
 
 export default function Upload() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  console.log(handleSubmit);
+
+  function onSubmit(data) {
+    // Wat is er ingevuld:
+    console.log(data);
+  }
+
+  console.log("ERRORS", errors);
+
   return (
     <Background background={show}>
-      <Formwrapper formName="Upload">
-        <label for="email">Email:</label>
-        <input id="email" type="email" placeholder="Your email" />
+      <Formwrapper
+        handleSubmit={handleSubmit}
+        onSubmit={onSubmit}
+        formName="Upload"
+      >
+        <label htmlFor="email">
+          Email:
+          <input
+            id="email"
+            type="text"
+            className={errors.email && "error"}
+            placeholder="Your email"
+            {...register("email", {
+              validate: (value) => value.includes("@"),
+            })}
+          />
+          {errors.email && (
+            <p className="error-message"> Email must contain @</p>
+          )}
+        </label>
 
-        <label for="subject">Subject:</label>
-        <input id="subject" type="text" placeholder="Your subject" />
+        <label htmlFor="subject">
+          Subject:
+          <input id="subject" type="text" placeholder="Your subject" />
+        </label>
         <br />
 
-        <label for="message">Your message:</label>
-        <textarea
-          id="message"
-          rows="3"
-          cols="10"
-          placeholder="Type your message here"
-        ></textarea>
+        <label htmlFor="message">
+          Your message:
+          <textarea
+            id="message"
+            rows="3"
+            cols="10"
+            placeholder="Type your message here"
+          ></textarea>
+        </label>
+
         <br />
 
-        <label for="file">Upload your file</label>
+        <label htmlFor="file">Upload your file</label>
         <input id="file" type="file" />
+
         <br />
         <br />
 

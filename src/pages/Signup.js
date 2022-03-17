@@ -3,7 +3,6 @@ import Formwrapper from "../components/Formwrapper";
 import Background from "../components/Background.js";
 import { useForm } from "react-hook-form";
 import "./Signup.css";
-import { getValue } from "@testing-library/user-event/dist/utils";
 
 export default function Signup() {
   const {
@@ -79,7 +78,7 @@ export default function Signup() {
           <input
             type="password"
             id="password"
-            name="password"
+            // name="password"
             className={errors.password && "error"}
             {...register("password", {
               minLength: 5,
@@ -97,28 +96,22 @@ export default function Signup() {
           <br />
         </label>
 
-        <label htmlFor="confirmPassword">
+        {/* <label htmlFor="confirmPassword">
           Confirm Password:
           <input
             id="confirmPassword"
             type="password"
-            {...register("confirmPassword", {
-              validate: {
-                emailEqual: (value) =>
-                  value === password.current || "Passwords do not match!",
-              },
+            {...register({
+              validate: (value) => value === confirmPassword.password,
             })}
           />
-          {errors.name?.type === "emailEqual" && (
-            <p className="error-message">Please enter your name</p>
-          )}
-          {errors.password && (
+          {errors.confirmPassword && (
             <p className="error-message"> Passwords do not match.</p>
           )}
         </label>
 
         <br />
-        <br />
+        <br /> */}
 
         <button id="signUp" type="submit">
           Sign Up
