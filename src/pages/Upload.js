@@ -45,18 +45,45 @@ export default function Upload() {
 
         <label htmlFor="subject">
           Subject:
-          <input id="subject" type="text" placeholder="Your subject" />
+          <input
+            id="subject"
+            type="text"
+            placeholder="Your subject"
+            {...register("subject", {
+              maxLength: {
+                value: 27,
+              },
+            })}
+          />
+          {errors.subject && (
+            <p className="error-message">
+              {" "}
+              It must contain a maximum of 27 characters
+            </p>
+          )}
         </label>
         <br />
 
         <label htmlFor="message">
           Your message:
           <textarea
+            type="text"
             id="message"
             rows="3"
             cols="10"
             placeholder="Type your message here"
+            {...register("message", {
+              maxLength: {
+                value: 250,
+              },
+            })}
           ></textarea>
+          {errors.message && (
+            <p className="error-message">
+              {" "}
+              It must contain a maximum of 250 characters
+            </p>
+          )}
         </label>
 
         <br />
