@@ -9,7 +9,7 @@ export default function Signin() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  console.log(handleSubmit);
+  // console.log(handleSubmit);
 
   function onSubmit(data) {
     console.log(data);

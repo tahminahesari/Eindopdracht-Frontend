@@ -3,22 +3,34 @@ import Formwrapper from "../components/Formwrapper";
 import Background from "../components/Background.js";
 import { useForm } from "react-hook-form";
 import "./Signup.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
+  let navigate = useNavigate();
   const {
-    // onderstaande functie en data(errors is een data) hal ik uit useForm
     register,
     handleSubmit,
     formState: { errors },
     watch,
   } = useForm();
-  console.log(handleSubmit);
-
-  //Submit handler
-  // toegang tot de data die de gebruiker heeft ingevuld
-  async function onSubmit(data) {}
   const firstPassword = watch("password");
 
+  async function onSubmit(data) {
+    console.log(data);
+    const response = await axios.post(
+      "https://frontend-educational-backend.herokuapp.com/api/auth/signup",
+      {
+        username: data.name,
+        email: data.email,
+        password: data.password,
+        role: ["user"],
+      }
+    );
+
+    navigate("../signin", { replace: true });
+    console.log("Wat krijgen we terug van de API?", response);
+  }
   return (
     <Background>
       <Formwrapper
@@ -75,7 +87,6 @@ export default function Signup() {
           <input
             type="password"
             id="password"
-            // name="password"
             className={errors.password && "error"}
             {...register("password", {
               minLength: 5,
