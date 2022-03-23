@@ -5,6 +5,7 @@ import "../components/Background.js";
 import Background from "../components/Background.js";
 import show from "../img/show.jpg";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 export default function Upload() {
   const {
@@ -12,10 +13,19 @@ export default function Upload() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  console.log(handleSubmit);
 
-  function onSubmit(data) {
+  async function onSubmit(data) {
     console.log(data);
+    const response = await axios.post(
+      "https://bts-quotes-api.herokuapp.com/POST/quotes",
+      {
+        quote: " ",
+        member: " ",
+        info: " ",
+      }
+    );
+
+    console.log(response);
   }
 
   return (
