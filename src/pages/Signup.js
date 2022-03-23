@@ -21,7 +21,7 @@ export default function Signup() {
     const response = await axios.post(
       "https://frontend-educational-backend.herokuapp.com/api/auth/signup",
       {
-        username: data.name,
+        username: data.username,
         email: data.email,
         password: data.password,
         role: ["user"],
@@ -29,7 +29,7 @@ export default function Signup() {
     );
 
     navigate("../signin", { replace: true });
-    console.log("Wat krijgen we terug van de API?", response);
+    console.log(response);
   }
   return (
     <Background>
@@ -38,26 +38,26 @@ export default function Signup() {
         onSubmit={onSubmit}
         formName="Sign up"
       >
-        <label htmlFor="name">
-          Name:
+        <label htmlFor="username">
+          Username:
           <input
             type="text"
-            id="name"
-            className={errors.name && "error"}
-            placeholder="Name"
-            {...register("name", {
+            id="username"
+            className={errors.username && "error"}
+            placeholder="Username"
+            {...register("username", {
               required: true,
               minLength: {
                 value: 2,
               },
             })}
           />
-          {errors.name?.type === "required" && (
-            <p className="error-message">Please enter your name</p>
+          {errors.username?.type === "required" && (
+            <p className="error-message">Please enter your username</p>
           )}
-          {errors.name?.type === "minLength" && (
+          {errors.username?.type === "minLength" && (
             <p className="error-message">
-              Name must contain at least 2 characters
+              Username must contain at least 2 characters
             </p>
           )}
         </label>

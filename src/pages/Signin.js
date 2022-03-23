@@ -2,17 +2,30 @@ import Formwrapper from "../components/Formwrapper";
 import Background from "../components/Background.js";
 import "./Signin.css";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Signin() {
+  let navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  // console.log(handleSubmit);
 
-  function onSubmit(data) {
+  async function onSubmit(data) {
     console.log(data);
+    const response = await axios.post(
+      " https://frontend-educational-backend.herokuapp.com/api/auth/signin",
+
+      {
+        username: data.username,
+        password: data.password,
+      }
+    );
+
+    navigate("../upload", { replace: true });
+    console.log(response);
   }
 
   return (
@@ -22,19 +35,27 @@ export default function Signin() {
         onSubmit={onSubmit}
         formName="Sign in"
       >
-        <label htmlFor="email">
-          Email:
+        <label htmlFor="username">
+          Username:
           <input
-            id="email"
             type="text"
-            className={errors.email && "error"}
-            placeholder="Email"
-            {...register("email", {
-              validate: (value) => value.includes("@"),
+            id="username"
+            className={errors.username && "error"}
+            placeholder="Username"
+            {...register("username", {
+              required: true,
+              minLength: {
+                value: 2,
+              },
             })}
           />
-          {errors.email && (
-            <p className="error-message"> Email must contain @</p>
+          {errors.username?.type === "required" && (
+            <p className="error-message">Please enter your username</p>
+          )}
+          {errors.username?.type === "minLength" && (
+            <p className="error-message">
+              Username must contain at least 2 characters
+            </p>
           )}
         </label>
         <br />
