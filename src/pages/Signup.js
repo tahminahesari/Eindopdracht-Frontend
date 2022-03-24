@@ -36,7 +36,7 @@ export default function Signup() {
       <Formwrapper
         handleSubmit={handleSubmit}
         onSubmit={onSubmit}
-        formName="Sign up"
+        formName="Sign Up"
       >
         <label htmlFor="username">
           Username:
