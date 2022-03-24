@@ -22,11 +22,11 @@ export default function Navbar() {
           <Link to="/signIn">
             <li>Sign in</li>
           </Link>
+          <Link to="/upload">
+            <li>Upload </li>
+          </Link>
           <Link to="/quote">
             <li>Quotes</li>
-          </Link>
-          <Link to="/upload">
-            <li>Upload Quote</li>
           </Link>
           <Link to="/game">
             <li>Quote Game</li>
