@@ -7,6 +7,7 @@ import show from "../img/show.jpg";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./Upload.css";
 
 export default function Upload() {
   let navigate = useNavigate();
@@ -42,45 +43,41 @@ export default function Upload() {
           <textarea
             type="text"
             id="quote"
+            className={errors.quote && "error"}
             rows="3"
             cols="10"
             placeholder="Please type quote here"
             {...register("quote", {
               maxLength: {
-                value: 300,
+                value: 350,
               },
             })}
           ></textarea>
           {errors.quote && (
             <p className="error-message">
               {" "}
-              It must contain a maximum of 300 characters
+              It must contain a maximum of 350 characters
             </p>
           )}
         </label>
         <br />
-
         <label htmlFor="member">
           Which Member:
-          <input
-            type="text"
-            id="member"
+          <select
             className={errors.member && "error"}
-            placeholder="Which member said"
-            {...register("member", {
-              required: true,
-              minLength: {
-                value: 1,
-              },
-            })}
-          />
+            {...register("member", { required: true })}
+          >
+            <option value="">--Please choose a member--</option>
+            <option value="Jin">Jin</option>
+            <option value="Suga">Suga</option>
+            <option value="J-Hope">J-Hope</option>
+            <option value="RM">RM</option>
+            <option value="Jimin">Jimin</option>
+            <option value="V">V</option>
+            <option value="Jungkook">Jungkook</option>
+          </select>
           {errors.member?.type === "required" && (
-            <p className="error-message">Please enter member name here </p>
-          )}
-          {errors.member?.type === "minLength" && (
-            <p className="error-message">
-              Member name must contain at least 1 characters
-            </p>
+            <p className="error-message">Please choose a member</p>
           )}
         </label>
         <br />
@@ -89,6 +86,7 @@ export default function Upload() {
           Which source:
           <input
             id="info"
+            className={errors.info && "error"}
             type="text"
             placeholder="Type the source here"
             {...register("info", {
@@ -105,7 +103,6 @@ export default function Upload() {
           )}
         </label>
         <br />
-
         <input id="send" type="submit" />
       </Formwrapper>
     </Background>

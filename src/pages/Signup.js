@@ -109,6 +109,7 @@ export default function Signup() {
           <input
             id="confirmPassword"
             type="password"
+            className={errors.confirmPassword && "error"}
             {...register("confirmPassword", {
               validate: (value) => {
                 return value === firstPassword;
