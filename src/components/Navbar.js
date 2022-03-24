@@ -17,10 +17,10 @@ export default function Navbar() {
             <li>Home</li>
           </Link>
           <Link to="/signup">
-            <li>Sign up</li>
+            <li>Sign Up</li>
           </Link>
           <Link to="/signIn">
-            <li>Sign in</li>
+            <li>Sign In</li>
           </Link>
           <Link to="/upload">
             <li>Upload </li>

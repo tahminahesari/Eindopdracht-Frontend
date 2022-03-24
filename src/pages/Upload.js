@@ -19,12 +19,11 @@ export default function Upload() {
   async function onSubmit(data) {
     console.log(data);
     const response = await axios.post(
-      "https://bts-quotes-api.herokuapp.com/POST/quotes",
+      "https://bts-quotes-api.herokuapp.com/quotes",
       {
-        data,
-        // quote: " ",
-        // member: " ",
-        // info: " ",
+        quote: data.quote,
+        member: data.member,
+        info: data.info,
       }
     );
     navigate("../quote", { replace: true });
@@ -87,7 +86,7 @@ export default function Upload() {
         <br />
 
         <label htmlFor="info">
-          Which source
+          Which source:
           <input
             id="info"
             type="text"

@@ -25,12 +25,6 @@ export default function Signup() {
         email: data.email,
         password: data.password,
         role: ["user"],
-      },
-      {
-        username: "admin",
-        email: "hesari@live.com",
-        password: "borahae7",
-        role: ["admin"],
       }
     );
 

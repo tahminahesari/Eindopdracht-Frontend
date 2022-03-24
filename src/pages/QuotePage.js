@@ -17,7 +17,7 @@ export default function QuotePage() {
           "https://bts-quotes-api.herokuapp.com/quotes"
         );
         // console.log(result);
-        setQuotes(result.data);
+        setQuotes(result.data.reverse());
       } catch (error) {}
     }
     // console.log("Hi!");
