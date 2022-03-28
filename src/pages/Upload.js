@@ -48,6 +48,7 @@ export default function Upload() {
             cols="10"
             placeholder="Please type quote here"
             {...register("quote", {
+              required: true,
               maxLength: {
                 value: 350,
               },
@@ -56,7 +57,7 @@ export default function Upload() {
           {errors.quote && (
             <p className="error-message">
               {" "}
-              It must contain a maximum of 350 characters
+              Please fill in a quote but no longer than 350 characters
             </p>
           )}
         </label>
@@ -90,6 +91,7 @@ export default function Upload() {
             type="text"
             placeholder="Type the source here"
             {...register("info", {
+              required: true,
               maxLength: {
                 value: 27,
               },
@@ -98,7 +100,7 @@ export default function Upload() {
           {errors.info && (
             <p className="error-message">
               {" "}
-              It must contain a maximum of 27 characters
+              Please fill in your source info but no longer than 27 characters
             </p>
           )}
         </label>
