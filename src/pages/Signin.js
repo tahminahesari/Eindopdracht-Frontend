@@ -2,15 +2,13 @@ import Formwrapper from "../components/Formwrapper";
 import Background from "../components/Background.js";
 import "./Signin.css";
 import { useForm } from "react-hook-form";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
+
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 
 export default function Signin() {
-  let navigate = useNavigate();
   const { login } = useContext(AuthContext);
-  console.log(login);
+
   const {
     register,
     handleSubmit,

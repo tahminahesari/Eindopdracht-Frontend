@@ -1,13 +1,13 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext({});
 
 function AuthenticationContextProvider({ children }) {
+  const [user, setUser] = useState({ accessToken: null });
   let navigate = useNavigate();
   async function login(data) {
-    console.log(data);
     const response = await axios.post(
       " https://frontend-educational-backend.herokuapp.com/api/auth/signin",
 
@@ -18,7 +18,8 @@ function AuthenticationContextProvider({ children }) {
     );
 
     navigate("../upload", { replace: true });
-    console.log("user", response.data);
+
+    setUser(response.data);
   }
 
   return (
