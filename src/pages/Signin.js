@@ -4,35 +4,24 @@ import "./Signin.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 
 export default function Signin() {
   let navigate = useNavigate();
+  const { login } = useContext(AuthContext);
+  console.log(login);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  async function onSubmit(data) {
-    console.log(data);
-    const response = await axios.post(
-      " https://frontend-educational-backend.herokuapp.com/api/auth/signin",
-
-      {
-        username: data.username,
-        password: data.password,
-      }
-    );
-
-    navigate("../upload", { replace: true });
-    console.log(response);
-  }
-
   return (
     <Background>
       <Formwrapper
         handleSubmit={handleSubmit}
-        onSubmit={onSubmit}
+        onSubmit={login}
         formName="Sign In"
       >
         <label htmlFor="username">
