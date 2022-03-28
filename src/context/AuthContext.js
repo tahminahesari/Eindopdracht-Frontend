@@ -1,12 +1,27 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext({});
 
 function AuthenticationContextProvider({ children }) {
-  const [user, setUser] = useState({ accessToken: null });
+  const [user, setUser] = useState({
+    accessToken: localStorage.getItem("accessToken"),
+  });
   let navigate = useNavigate();
+  useEffect(() => {
+    async function checkToken() {
+      const response = await axios.get(
+        "https://frontend-educational-backend.herokuapp.com/api/user",
+        {
+          headers: { Authorization: `Bearer ${user.accessToken}` },
+        }
+      );
+      console.log(response);
+      setUser({ accessToken: user.accessToken, ...response.data });
+    }
+    checkToken();
+  }, [user.accessToken]);
   async function login(data) {
     const response = await axios.post(
       " https://frontend-educational-backend.herokuapp.com/api/auth/signin",
@@ -20,8 +35,9 @@ function AuthenticationContextProvider({ children }) {
     navigate("../upload", { replace: true });
 
     setUser(response.data);
+    localStorage.setItem("accessToken", response.data.accessToken);
   }
-
+  console.log(user);
   return (
     <AuthContext.Provider value={{ login: login }}>
       {children}
