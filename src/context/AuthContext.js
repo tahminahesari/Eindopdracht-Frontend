@@ -10,18 +10,33 @@ function AuthenticationContextProvider({ children }) {
   });
   let navigate = useNavigate();
   useEffect(() => {
+    if (user.accessToken === null) return;
+
     async function checkToken() {
-      const response = await axios.get(
-        "https://frontend-educational-backend.herokuapp.com/api/user",
-        {
-          headers: { Authorization: `Bearer ${user.accessToken}` },
-        }
-      );
-      console.log(response);
-      setUser({ accessToken: user.accessToken, ...response.data });
+      try {
+        const response = await axios.get(
+          "https://frontend-educational-backend.herokuapp.com/api/user",
+          {
+            headers: { Authorization: `Bearer ${user.accessToken}` },
+          }
+        );
+        console.log(response);
+        setUser({ accessToken: user.accessToken, ...response.data });
+      } catch (error) {
+        console.error(error);
+        logout();
+        navigate("../signin", { replace: true });
+      }
     }
+
     checkToken();
   }, [user.accessToken]);
+
+  function logout() {
+    setUser({ accessToken: null });
+    localStorage.removeItem("accessToken");
+  }
+
   async function login(data) {
     const response = await axios.post(
       " https://frontend-educational-backend.herokuapp.com/api/auth/signin",
