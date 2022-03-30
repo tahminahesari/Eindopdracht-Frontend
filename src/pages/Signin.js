@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 
 export default function Signin() {
-  const { login } = useContext(AuthContext);
+  const { login, user } = useContext(AuthContext);
 
   const {
     register,
@@ -70,7 +70,7 @@ export default function Signin() {
         </label>
         <br />
         <br />
-
+        <p className="error-message">{user.apiError}</p>
         <button id="signIn" type="submit">
           Sign In
         </button>

@@ -7,6 +7,7 @@ export const AuthContext = createContext({});
 function AuthenticationContextProvider({ children }) {
   const [user, setUser] = useState({
     accessToken: localStorage.getItem("accessToken"),
+    apiError: null,
   });
 
   let navigate = useNavigate();
@@ -39,19 +40,26 @@ function AuthenticationContextProvider({ children }) {
   }
 
   async function login(data) {
-    const response = await axios.post(
-      " https://frontend-educational-backend.herokuapp.com/api/auth/signin",
+    try {
+      const response = await axios.post(
+        " https://frontend-educational-backend.herokuapp.com/api/auth/signin",
 
-      {
-        username: data.username,
-        password: data.password,
-      }
-    );
+        {
+          username: data.username,
+          password: data.password,
+        }
+      );
 
-    navigate("../upload", { replace: true });
+      navigate("../upload", { replace: true });
 
-    setUser(response.data);
-    localStorage.setItem("accessToken", response.data.accessToken);
+      setUser(response.data);
+      localStorage.setItem("accessToken", response.data.accessToken);
+    } catch (error) {
+      setUser({
+        accessToken: null,
+        apiError: "Username or password is incorrect",
+      });
+    }
   }
 
   return (
