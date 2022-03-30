@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Formwrapper from "../components/Formwrapper";
 import Background from "../components/Background.js";
 import { useForm } from "react-hook-form";
@@ -8,6 +8,8 @@ import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
   let navigate = useNavigate();
+  const [apiError, setApiError] = useState(null);
+
   const {
     register,
     handleSubmit,
@@ -17,19 +19,21 @@ export default function Signup() {
   const firstPassword = watch("password");
 
   async function onSubmit(data) {
-    console.log(data);
-    const response = await axios.post(
-      "https://frontend-educational-backend.herokuapp.com/api/auth/signup",
-      {
-        username: data.username,
-        email: data.email,
-        password: data.password,
-        role: ["user"],
-      }
-    );
+    try {
+      const response = await axios.post(
+        "https://frontend-educational-backend.herokuapp.com/api/auth/signup",
+        {
+          username: data.username,
+          email: data.email,
+          password: data.password,
+          role: ["user"],
+        }
+      );
 
-    navigate("../signin", { replace: true });
-    console.log(response);
+      navigate("../signin", { replace: true });
+    } catch (error) {
+      setApiError(error.response.data);
+    }
   }
   return (
     <Background>
@@ -123,7 +127,7 @@ export default function Signup() {
 
         <br />
         <br />
-
+        <p className="error-message">{apiError}</p>
         <button id="signUp" type="submit">
           Sign Up
         </button>

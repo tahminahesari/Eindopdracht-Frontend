@@ -6,7 +6,6 @@ import { useContext } from "react";
 
 export default function Navbar() {
   const auth = useContext(AuthContext);
-  console.log(auth);
   const isSignedIn = auth.user.accessToken !== null;
 
   return (
