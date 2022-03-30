@@ -8,7 +8,9 @@ function AuthenticationContextProvider({ children }) {
   const [user, setUser] = useState({
     accessToken: localStorage.getItem("accessToken"),
   });
+
   let navigate = useNavigate();
+
   useEffect(() => {
     if (user.accessToken === null) return;
 
@@ -20,7 +22,6 @@ function AuthenticationContextProvider({ children }) {
             headers: { Authorization: `Bearer ${user.accessToken}` },
           }
         );
-        console.log(response);
         setUser({ accessToken: user.accessToken, ...response.data });
       } catch (error) {
         console.error(error);
@@ -52,9 +53,9 @@ function AuthenticationContextProvider({ children }) {
     setUser(response.data);
     localStorage.setItem("accessToken", response.data.accessToken);
   }
-  console.log(user);
+
   return (
-    <AuthContext.Provider value={{ login: login }}>
+    <AuthContext.Provider value={{ login: login, user: user }}>
       {children}
     </AuthContext.Provider>
   );
