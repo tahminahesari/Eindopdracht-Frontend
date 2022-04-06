@@ -32,7 +32,7 @@ export default function Navbar() {
             </Link>
           )}
           <Link to="/upload">
-            <li>Upload {!isSignedIn && "(Please sign in first)"}</li>
+            <li>Upload {!isSignedIn && "(please sign in first)"}</li>
           </Link>
           <Link to="/quote">
             <li>Quotes</li>

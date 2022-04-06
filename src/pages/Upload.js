@@ -105,7 +105,9 @@ export default function Upload() {
           )}
         </label>
         <br />
-        <input id="send" type="submit" />
+        <button id="send" type="submit">
+          Upload
+        </button>
       </Formwrapper>
     </Background>
   );
