@@ -7,8 +7,12 @@ Volgende functionaliteiten bevatten mijn webapplicatie “Borahae”
 - Fan kan een account aanmaken
 - Fan kan inloggen
 - Een ingelogde fan kan een quote uploaden( tekst )
-- Alle Quotes zien van alle members
+- Alle quotes zien van alle members
 - Gebruiker kan raden van wie de quote is (game)
+
+## Screenshots
+
+![This is homepage](C:\Users\hesar\Desktop\GreenShots)
 
 ## Benodigdheden
 
@@ -22,41 +26,37 @@ Node.js dient geinstaleerd te zijn om app te kunnen runnen.
 
 ## Installatie stappen
 
-In the project directory, you can run:
+- git clone vanuit [Borahae](hhttps://github.com/oanhgle/bangtan-api)
+- npm install
+- npm start
 
-### `npm start`
+## Inloggegevens
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Er zijn geen standaard accounts beschikbaar, om in te logggen dient gebruiker te registeren via de browsers via [Borahae](http://localhost:3000/signup) Sign Up page.
+Met het volgende gegevens:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- gebruikersnaam
+- email
+- wachtwoord
 
-### `npm test`
+En het vervolgens inloggen via [Borahae](http://localhost:3000/signIn) Sign In page.
+Met het volgende gegevens:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- gebruikersnaam
+- wachtwoord
 
-### `npm run build`
+## NPM Commando's
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `npm start`
+  om de applicatie te starten.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  Open [http://localhost:3000](http://localhost:3000) om het in het browser te bekijken.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `npm test`
+  om te je code te testen voor het deployen.
 
-### `npm run eject`
+- `npm run build`
+  voor optimaliseren en voor het betere gebruikerservaring.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `npm run eject`
+  verwijderd configuratie keuzes van je dependency ?
