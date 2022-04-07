@@ -1,8 +1,26 @@
-# Getting Started with Create React App
+# "Borahae" project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Met behulp van React heb ik webapplicatie genaamd “Borahae gemaakt voor Zuid Koreaanse K-Pop Band “BTS”. Waar in fans alle quote van alle 7 members kunnen terug vinden in een plekje, spelletjes spelen en quote kunnen plaatsen van de members. Om te kunnen uploaden dient fan ingelogd te zijn. Om data van mijn gebruikers opslaan zoals gebruikersnaam, email en wachtwoord, maak ik gebruik van Novi Backend API.
 
-## Available Scripts
+Volgende functionaliteiten bevatten mijn webapplicatie “Borahae”
+
+- Fan kan een account aanmaken
+- Fan kan inloggen
+- Een ingelogde fan kan een quote uploaden( tekst )
+- Alle Quotes zien van alle members
+- Gebruiker kan raden van wie de quote is (game)
+
+## Benodigdheden
+
+Github repo van mij project vind je hier [Borahae](hhttps://github.com/oanhgle/bangtan-api).
+
+Om data opslaan is gebruik gemaakt van de [Novi Backend API](https://github.com/hogeschoolnovi/novi-educational-backend-documentation).
+
+Om data op te halen is gebruik gemaakt van de [BTS Quotes API](https://github.com/hogeschoolnovi/novi-educational-backend-documentation).
+
+Node.js dient geinstaleerd te zijn om app te kunnen runnen.
+
+## Installatie stappen
 
 In the project directory, you can run:
 
@@ -38,32 +56,6 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `npm run build` fails to minify
 
