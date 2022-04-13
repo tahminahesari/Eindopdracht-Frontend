@@ -26,6 +26,7 @@ function AuthenticationContextProvider({ children }) {
         setUser({ accessToken: user.accessToken, ...response.data });
       } catch (error) {
         console.error(error);
+
         logout();
         navigate("../signin", { replace: true });
       }
@@ -50,10 +51,9 @@ function AuthenticationContextProvider({ children }) {
         }
       );
 
-      navigate("../upload", { replace: true });
-
       setUser(response.data);
       localStorage.setItem("accessToken", response.data.accessToken);
+      setTimeout(() => navigate("../upload"), 200);
     } catch (error) {
       setUser({
         accessToken: null,
