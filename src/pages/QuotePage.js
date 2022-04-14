@@ -29,17 +29,18 @@ export default function QuotePage() {
     <Background background={blackswan}>
       <TransparentCard>
         <PageTitle> BTS Quotes </PageTitle>
-        <Quote
-          quote="“The only time you should ever look back, is to see how far you've
-          come.”"
-          member=" Bangtan Boys, Butterfly"
-        />
+
         {quotes.map((quote) => {
           // console.log(quote);
           return (
             <Quote key={quote.id} quote={quote.quote} member={quote.member} />
           );
         })}
+        <Quote
+          quote="“The only time you should ever look back, is to see how far you've
+        come.”"
+          member=" Bangtan Boys, Butterfly"
+        />
       </TransparentCard>
     </Background>
   );
