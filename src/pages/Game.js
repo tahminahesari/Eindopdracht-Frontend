@@ -35,7 +35,7 @@ export default function Game() {
     if (questionsTried === 0) {
       fetchRandomQuote();
     } else if (selectedMember !== "") {
-      const myTimeout = setTimeout(fetchRandomQuote, 5000);
+      setTimeout(fetchRandomQuote, 5000);
     }
   }, [questionsTried, selectedMember]);
 

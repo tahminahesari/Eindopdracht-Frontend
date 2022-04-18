@@ -20,7 +20,7 @@ export default function Signup() {
 
   async function onSubmit(data) {
     try {
-      const response = await axios.post(
+      await axios.post(
         "https://frontend-educational-backend.herokuapp.com/api/auth/signup",
         {
           username: data.username,

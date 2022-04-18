@@ -33,7 +33,7 @@ function AuthenticationContextProvider({ children }) {
     }
 
     checkToken();
-  }, [user.accessToken]);
+  }, [user.accessToken, navigate]);
 
   function logout() {
     setUser({ accessToken: null });
