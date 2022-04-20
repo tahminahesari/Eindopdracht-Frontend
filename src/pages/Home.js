@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
 import Background from "../components/Background";
-import bts from "../img/bts.png";
+import seven from "../img/seven.gif";
 import Quote from "../components/Quote";
 import PageTitle from "../components/PageTitle";
 import TransparentCard from "../components/TransparentCard";
@@ -24,7 +24,7 @@ export default function Home() {
   }, []);
 
   return (
-    <Background background={bts}>
+    <Background background={seven}>
       <TransparentCard>
         <PageTitle>Get a random quote </PageTitle>
 

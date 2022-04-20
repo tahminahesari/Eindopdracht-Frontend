@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Game.css";
 import "../components/Background.js";
 import Background from "../components/Background.js";
-import btblue from "../img/btblue.jpg";
+import yolo from "../img/yolo.gif";
 import RadioButtons from "../components/RadioButtons";
 import Quote from "../components/Quote";
 import PageTitle from "../components/PageTitle";
@@ -57,7 +57,7 @@ export default function Game() {
   }
 
   return (
-    <Background background={btblue}>
+    <Background background={yolo}>
       <TransparentCard>
         <PageTitle>Who said this? </PageTitle>
 

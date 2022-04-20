@@ -3,6 +3,7 @@ import Formwrapper from "../components/Formwrapper";
 import Background from "../components/Background.js";
 import { useForm } from "react-hook-form";
 import "./Signup.css";
+import stage from "../img/stage.jpg";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -36,7 +37,7 @@ export default function Signup() {
     }
   }
   return (
-    <Background>
+    <Background background={stage}>
       <Formwrapper
         handleSubmit={handleSubmit}
         onSubmit={onSubmit}

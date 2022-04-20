@@ -1,8 +1,8 @@
 import Formwrapper from "../components/Formwrapper";
 import Background from "../components/Background.js";
 import "./Signin.css";
+import mountain from "../img/mountain.jpg";
 import { useForm } from "react-hook-form";
-
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 
@@ -16,7 +16,7 @@ export default function Signin() {
   } = useForm();
 
   return (
-    <Background>
+    <Background background={mountain}>
       <Formwrapper
         handleSubmit={handleSubmit}
         onSubmit={login}
