@@ -5,6 +5,7 @@
 }
 
 .quote-wrapper {
-  width: 400px;
+  width: 100%;
   margin: auto;
+  max-width: 400px;
 }
