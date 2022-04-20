@@ -16,14 +16,13 @@ export default function QuotePage() {
         const result = await axios.get(
           "https://bts-quotes-api.herokuapp.com/quotes"
         );
-        // console.log(result);
+
         setQuotes(result.data.reverse());
       } catch (error) {}
     }
-    // console.log("Hi!");
+
     fetchQuotes();
   }, []);
-  // console.log(quotes);
 
   return (
     <Background background={blackswan}>
@@ -31,7 +30,6 @@ export default function QuotePage() {
         <PageTitle> BTS Quotes </PageTitle>
 
         {quotes.map((quote) => {
-          // console.log(quote);
           return (
             <Quote key={quote.id} quote={quote.quote} member={quote.member} />
           );
