@@ -3,3 +3,15 @@ h1 {
   text-shadow: -1px -1px 0 #232323, 1px -1px 0 #232323, -1px 1px 0 #232323,
     1px 1px 0 #232323;
 }
+
+.page {
+  background-color: transparent;
+}
+.quotebg {
+  background-image: url("../img/bts.jpg");
+  background-size: 100%;
+  background-position: center bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #000;
+}

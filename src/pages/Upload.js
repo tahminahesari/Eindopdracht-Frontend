@@ -3,7 +3,7 @@ import Formwrapper from "../components/Formwrapper";
 import "./Upload.css";
 import "../components/Background.js";
 import Background from "../components/Background.js";
-import show from "../img/show.jpg";
+import disco from "../img/disco.jpg";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -32,7 +32,7 @@ export default function Upload() {
   }
 
   return (
-    <Background background={show}>
+    <Background background={disco}>
       <Formwrapper
         handleSubmit={handleSubmit}
         onSubmit={onSubmit}
@@ -46,7 +46,7 @@ export default function Upload() {
             className={errors.quote && "error"}
             rows="3"
             cols="10"
-            placeholder="Please type quote here"
+            placeholder="Please type the quote here"
             {...register("quote", {
               required: true,
               maxLength: {
@@ -89,7 +89,7 @@ export default function Upload() {
             id="info"
             className={errors.info && "error"}
             type="text"
-            placeholder="Type the source here"
+            placeholder="Please type the source here"
             {...register("info", {
               required: true,
               maxLength: {

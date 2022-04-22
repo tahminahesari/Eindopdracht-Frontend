@@ -41,11 +41,11 @@ export default function Game() {
 
   let feedback;
   if (selectedMember === correctMember) {
-    feedback = "CORRECT!";
+    feedback = "CORRECT!🥳🥳🥳";
   } else if (selectedMember === "") {
     feedback = "Please select a member.";
   } else {
-    feedback = "Oops it was actually: " + correctMember;
+    feedback = "Oops 🙊 it was actually: " + correctMember;
   }
   let color;
   if (selectedMember === correctMember) {

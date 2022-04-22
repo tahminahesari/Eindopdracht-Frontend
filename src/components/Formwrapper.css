@@ -7,8 +7,7 @@
   border: 3px solid white;
   padding: 20px;
 
-  /*TEST*/
-  background: rgba(244, 239, 239, 0.5);
+  background: rgba(238, 235, 239, 0.5);
 }
 
 @media screen and (min-width: 0px) and (max-width: 400px) {
