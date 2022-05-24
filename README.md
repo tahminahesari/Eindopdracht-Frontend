@@ -16,11 +16,11 @@ Mijn webapplicatie “Borahae” bevat de volgende functionaliteit:
 
 ## Benodigdheden
 
-- Github repo van mij project vind je hier [Borahae](hhttps://github.com/oanhgle/bangtan-api).
+- Github repo van mij project vind je hier [Borahae](https://github.com/tahminahesari/Eindopdracht-Frontend.git).
 
 - Om data opslaan is gebruik gemaakt van de [Novi Backend API](https://github.com/hogeschoolnovi/novi-educational-backend-documentation).
 
-- Om data op te halen is gebruik gemaakt van de [BTS Quotes API](https://github.com/hogeschoolnovi/novi-educational-backend-documentation).
+- Om data op te halen is gebruik gemaakt van de [BTS Quotes API](https://github.com/oanhgle/bangtan-api).
 
 - Node.js dient geinstalleerd te zijn om app te kunnen runnen. Ik heb versie v16.13.2 gebruikt tijdens het ontwikkelen.
 
