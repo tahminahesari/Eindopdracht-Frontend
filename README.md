@@ -1,5 +1,6 @@
 # "Borahae" project
 
+## Live versie: https://borahae-quote.netlify.app/
 Met behulp van React heb ik webapplicatie genaamd “Borahae" gemaakt voor Zuid Koreaanse K-Pop Band “BTS”. Waarin fans alle quotes van alle 7 members kunnen terugvinden op 1 plek, spelletjes kunnen spelen en quotes kunnen plaatsen van de members. Om te kunnen uploaden dient de fan ingelogd te zijn. Om de data van mijn gebruikers op te slaan zoals gebruikersnaam, email en wachtwoord, maak ik gebruik van Novi Backend API.
 
 Mijn webapplicatie “Borahae” bevat de volgende functionaliteit:
